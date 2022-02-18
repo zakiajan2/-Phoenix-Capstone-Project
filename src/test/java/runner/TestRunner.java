@@ -7,7 +7,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import utilities.CucumberReportingConfig;
 
-	//test123
+	
 	//we will use cucumber options to setup our TestRunner class
 	//feature : we can add the path to our feature files here
 	//glue : we add the path to our stepDefinitions where (we are gluing features to steps)
