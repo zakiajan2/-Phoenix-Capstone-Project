@@ -112,7 +112,7 @@ public class RetailPageObject extends Base {
 	}
 
 	public void EnterUserName() {
-		enteUserName.sendKeys("ff@gmail.com");///////////// it should be new for each test running////////////////////
+		enteUserName.sendKeys("abcd4@gmail.com");///////////// it should be new for each test running////////////////////
 
 	}
 
@@ -245,7 +245,7 @@ public class RetailPageObject extends Base {
 
 	public void editEmailInMyAccountInformation() {
 		editEmail.clear();
-		editEmail.sendKeys("ff@gmail.com");// it should be new in each test
+		editEmail.sendKeys("abcd4@gmail.com");// it should be new in each test
 
 	}
 

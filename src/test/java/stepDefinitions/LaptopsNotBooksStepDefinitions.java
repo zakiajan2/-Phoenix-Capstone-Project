@@ -122,14 +122,14 @@ public class LaptopsNotBooksStepDefinitions extends Base {
 
 	@When("User click on product comparison icon on ‘MacBook Air")
 	public void user_click_on_product_comparison_icon_on_mac_book_air() {
-		laptop.clickOnComparMacBookonLaptopNoteBookPage();
-		logger.info("user successfully clicked on product comparison icon on MacBppkAir");
+		laptop.clickOnComparMacBookAironLaptopNoteBookPage();
+		logger.info("user successfully clicked on product comparison icon on MacBppkAir passed");
 	}
 
 	@Then("User should see a message ‘Success: You have added MacBook Air to your product comparison!’")
 	public void user_should_see_a_message_success_you_have_added_mac_book_air_to_your_product_comparison() {
 		laptop.successMassageforaddingMacBookAironNotebookPage();
-		logger.info("user see success masssage for adding macBookAir to product comparison");
+		logger.info("user successfully see success masssage for adding macBookAir to product comparison");
 	}
 
 	@Then("User click on Product comparison link")
@@ -174,8 +174,10 @@ public class LaptopsNotBooksStepDefinitions extends Base {
 		laptop.clickOnMacBookProItem();
 	}
 
-	@Then("User should see  ‘${double}’ price tag is present on UI.")
+
+	@Then("User should see  ${double} price tag is present on UI.")
 	public void user_should_see_$_price_tag_is_present_on_ui(Double double1) {
+	   
 		laptop.ValidationmackBookProPrice2000();
 //		String p2000 = laptop.getMacBookProPrice2000().getText();
 //		if (p2000.equalsIgnoreCase("$2,000.00")) {

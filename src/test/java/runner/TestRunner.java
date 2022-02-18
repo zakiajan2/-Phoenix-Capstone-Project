@@ -22,7 +22,7 @@ import utilities.CucumberReportingConfig;
 	@CucumberOptions(
 	features = "classpath:features",//instead of path we put like this is better because in other computer it will work
 	glue = "stepDefinitions",// it glue test runner to step definition class
-	tags = "@Regression",//@Laptop ,@Desktop , ,@Retail,Home
+	tags = "@Regression",//@Laptop ,@Desktop , ,@Retail,Home , @Regression
 	dryRun = false,//it should be false to run and true for only check
 	strict = true,// true means please check if there is step deff for each scenario
     	monochrome = true,

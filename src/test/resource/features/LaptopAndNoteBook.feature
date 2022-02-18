@@ -1,5 +1,6 @@
 
 @Regression
+
 Feature: Laptop & NoteBooks 
 
 Background:
@@ -32,4 +33,4 @@ Then User should get a message ‘You must login or create an account to save So
 
 Scenario: Validate the price of MacBook Pro is 2000   
 And User click on ‘MacBook Pro’ item 
-Then User should see  ‘$2,000.00’ price tag is present on UI.
+Then User should see  $2,000.00 price tag is present on UI.

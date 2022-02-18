@@ -2,10 +2,9 @@ package pageObjects;
 import java.util.List;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import Core.Base;
@@ -254,7 +253,7 @@ public class LaptopsNoteBooksPageObject extends Base {
 	@FindBy(xpath = "(//*[@type='button'])[13]")
 	private WebElement addToWishListMacBook;
 
-	@FindBy(xpath = "(//*[@type='button'])[14]")
+	@FindBy(xpath = "(//button[@data-original-title='Compare this Product'])[2]")
 	private WebElement compareMacBook;
 
 	@FindBy(xpath = "(//*[@class='img-responsive'])[4]")
@@ -275,7 +274,7 @@ public class LaptopsNoteBooksPageObject extends Base {
 	@FindBy(xpath = "(//*[@type='button'])[16]")
 	private WebElement addToWishListMacBookAir;
 
-	@FindBy(xpath = "(//*[@type='button'])[17]")
+	@FindBy(xpath = "(//button[@data-original-title='Compare this Product'])[3]")
 	private WebElement compareMacBookAir;
 
 	@FindBy(xpath = "(//*[@class='img-responsive'])[5]")
@@ -284,7 +283,7 @@ public class LaptopsNoteBooksPageObject extends Base {
 	@FindBy(linkText = ("MacBook Pro"))
 	private WebElement MacBookProText;
 
-	@FindBy(xpath = "//p[contains(text(),'Latest Intel mobil')]")
+	@FindBy(xpath = "//p[contains(text(),'Latest Intel mobil')]")///////////
 	private WebElement MacBookProTextDescription;
 
 	@FindBy(xpath = "(//*[@class='price'])[4]")
@@ -460,7 +459,7 @@ public class LaptopsNoteBooksPageObject extends Base {
 		Utilities.waitAndClickElement(compareMacBook);
 	}
 
-	public void clickOnComparMacBookonLaptopNoteBookPage() {
+	public void clickOnComparMacBookAironLaptopNoteBookPage() {
 		Utilities.waitAndClickElement(compareMacBookAir);
 		compareMacBookAir.click();
 
@@ -471,11 +470,15 @@ public class LaptopsNoteBooksPageObject extends Base {
 
 	public void successMassageforaddingMacBookAironNotebookPage() {
 
-		String x = succusmassageForMacBookAir.getText();
-		if (x.contains("Success: You have added MacBook to your product comparison!")) {
+		String actuall = succusmassageForMacBookAir.getText();
+		//String expected="Success: You have added MacBook to your product comparison![\r\n"
+				//+ "×]";
+		//Assert.assertEquals(expected, actuall);
+		
+		if (actuall.contains("Success: You have added MacBook to your product comparison!")) {
 			logger.info("success massage verifyed");
 		} else {
-			logger.info("text not match\n" + x);
+			logger.info("text not match\n" + actuall);
 		}
 		Utilities.highlightelementRedBorder(getSuccessMessageforAddMacBookinMacBookPage());
 		try {
@@ -486,7 +489,10 @@ public class LaptopsNoteBooksPageObject extends Base {
 	}
 
 	public void clickOnproductComparisonLink() {
+		Actions act =new Actions(driver);
+		act.moveToElement(productComparisonLink).click().build().perform();
 		Utilities.waitAndClickElement(productComparisonLink);
+		
 	}
 
 	public void productComparisonchrtVerification() {

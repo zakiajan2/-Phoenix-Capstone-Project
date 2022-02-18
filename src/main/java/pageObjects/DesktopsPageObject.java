@@ -1,13 +1,13 @@
 package pageObjects;
 
-	import java.io.IOException;
+	
 
 	import org.openqa.selenium.WebElement;
 	import org.openqa.selenium.support.FindBy;
 	import org.openqa.selenium.support.PageFactory;
 
 	import Core.Base;
-	import utilities.Utilities;
+	
     
 	public class DesktopsPageObject extends Base {
 		public DesktopsPageObject() {
@@ -595,7 +595,7 @@ package pageObjects;
 		
 		public void successMessageForAddCanon() {
 			String text=getSuccessMessageForAddCanon().getText();
-		
+		System.out.println(text);
 		}
 		
 		public void clickOnCanonEOSItemIndesktopPage() {
